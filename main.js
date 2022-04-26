@@ -34,28 +34,6 @@ class Swap extends React.Component {
   }
 }
 
-// class LikeButton extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       liked: false,
-//     };
-//   }
-
-//   render() {
-//     if (this.state.liked) {
-//       return "You liked this.";
-//     }
-
-//     return e(
-//       "button",
-//       { onClick: () => this.setState({ liked: true }) },
-//       "Like"
-//     );
-//   }
-// }
-
-// ReactDOM.render(e(LikeButton), domContainer);
 const container = document.getElementById('image')
 const root = ReactDOM.createRoot(container);
 root.render(<Swap />)
