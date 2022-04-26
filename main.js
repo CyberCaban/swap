@@ -10,8 +10,9 @@ class Swap extends React.Component {
     };
   }
 
-  CycleImg(){
-    switch (this.currentImg) {
+  CycleImg=()=>{
+    this.state.currentImg
+    switch (this.state.currentImg) {
       case "kot":
         this.setState({currentImg:'pes'})
         break;
@@ -25,9 +26,9 @@ class Swap extends React.Component {
   }
 
   render() {
-    const imgsrc = '/img/' + {currentImg} + '.png'
-    return React.createElement(<div>
-        <button onClick = {this.CycleImg} ></button>
+    const imgsrc = '/img/' + this.state.currentImg + '.png'
+    return (<div>
+        <button onClick = {this.CycleImg} >Swap</button>
         <img src={imgsrc} alt="sss" />
       </div>);
   }
@@ -55,6 +56,6 @@ class Swap extends React.Component {
 // }
 
 // ReactDOM.render(e(LikeButton), domContainer);
-const image = document.querySelector('.image')
-const root = ReactDOM.createRoot(image)
+const container = document.getElementById('image')
+const root = ReactDOM.createRoot(container);
 root.render(<Swap />)
