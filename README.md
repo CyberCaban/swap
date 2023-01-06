@@ -1,2 +1,2 @@
 # Swap
-Cycle through images, made by react
+Cycle through images, made with react
